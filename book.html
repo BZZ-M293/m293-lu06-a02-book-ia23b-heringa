@@ -7,24 +7,23 @@
   <body>
     <form action="https://it.bzz.ch/demo/formdata/index.php" method="post">
       
-      <label for="buchtitel">Vorname:</label><br>
-      <input id="buchtitel" name="buchtitel" type="text"><br>
+      <label for="buchtitel">Buchtitel:</label><br>
+      <input id="buchtitel" name="buchtitel" type="text" minlength="2" maxlength="30" required><br>
       
-      <label for="autoren">Nachname:</label>
-      <input id="autoren" name="autoren" type="text"><br>
+      <label for="autoren">Autoren:</label><br>
+      <input id="autoren" name="autoren" type="text" minlength="5" maxlength="40" required><br>
       
-      <label for="preis">Wohnort:</label>
-      <input id="preis" name="preis" type="text"><br>
+      <label for="preis">Preis:</label><br>
+      <input id="preis" name="preis" type="number" step="0.01" min="0.05" max="99.95" required><br>
       
-      <label for="erscheinungsdatum">Erscheinungsdatum:</label>
-      <input id="erscheinungsdatum" name="erscheinungsdatum" type="date"><br>
+      <label for="erscheinungsdatum">Erscheinungsdatum:</label><br>
+      <input id="erscheinungsdatum" name="erscheinungsdatum" type="date" required pattern="\d{2}\.\d{2}\.\d{4}"><br>
       
-      <label for="auflage">Auflage:</label>
-      <input id="auflage" name="auflage" type="text"><br>
+      <label for="auflage">Auflage:</label><br>
+      <input id="auflage" name="auflage" type="number" min="1" max="9" required><br>
       
-      <button type="submit">Submit</button>
-      <button type="reset">Reset</button>
-        
+      <button type="submit">Absenden</button>
+      <button type="reset">Zurücksetzen</button>
 
     </form>
   </body>
